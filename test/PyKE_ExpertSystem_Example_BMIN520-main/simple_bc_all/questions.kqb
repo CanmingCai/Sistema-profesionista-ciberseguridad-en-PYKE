@@ -1,0 +1,66 @@
+# questions.kqb
+
+any_disasters($ans)
+	Are any of the following disasters currently occurring?
+	---
+	$ans = select_1
+		1: Forest Fire
+		2: Tornado
+		3: Hurricane
+		4: Pandemic
+		5: None of the above
+			! Thank goodness
+
+is_raining($ans)
+	Is it raining?
+	---
+	$ans = yn
+	
+is_windy($ans)
+	Is it windy?
+	---
+	$ans = yn
+
+
+#cibersuguridad
+cyber_threat($ans)
+    Tienes algun amenazas de cibersuguridad?
+    ---
+    $ans = select_1
+        1: Phishing
+        2: Malware
+        3: Ransomware
+        4: Gusado
+        5: Nada
+            ! Estas seguro
+
+report_to($ans)
+    A quien vas a reportar?
+    ---
+    $ans = select_1
+        1: Jazz
+        2: Ricardo
+        3: Caro
+        4: Nadie
+
+
+#otra prueba
+has_phishing_email($ans)
+    Ha recibido un correo de phishing?
+    ---
+    $ans = yn
+
+has_malware($ans)
+    Tu sistema esta infectado por malware?
+    ---
+    $ans = yn
+
+has_ransomware($ans)
+    Tu sistema esta infectado por ransomware?
+    ---
+    $ans = yn
+
+is_system_slow($ans)
+    Is your system running unusually slow?
+    ---
+    $ans = yn

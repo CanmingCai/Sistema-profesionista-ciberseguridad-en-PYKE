@@ -1,0 +1,8 @@
+# plant_diagnosis.krb
+
+plant_has_disease
+    use plant_diagnosis($plant, $symptom)
+    when
+        plant_symptom($plant, $symptom)
+        symptom_to_disease($symptom, $disease)
+

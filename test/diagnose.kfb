@@ -1,0 +1,4 @@
+# plant_facts.kfb
+
+plant_symptom("Tomato", "Spots_on_leaves")
+symptom_to_disease("Spots_on_leaves", "Late_blight")
