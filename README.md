@@ -3,6 +3,13 @@
 **Codigo del fuente:**
 https://github.com/UrbsLab/PyKE_ExpertSystem_Example_BMIN520
 
+**Instalar PYKE**
+
+Ir a a la carpeta pyke-1.1.1
+```
+pip install setup.py
+```
+
 **Path del ejemplo:**
 ```
 test/PyKE_ExpertSystem_Example_BMIN520-main/simple_bc_all
