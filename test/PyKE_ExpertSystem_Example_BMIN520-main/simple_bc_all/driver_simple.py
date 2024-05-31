@@ -6,6 +6,10 @@ from pyke import krb_traceback
 
 engine = knowledge_engine.engine(__file__)
 
+ans_seccion1 = {
+    "caso1" : "Software antivirus, IDS_e_PS, PKI, MDR",
+    "caso2" : "Firewall, PKI, MFA, IAM",
+}
 
 cyber_threat_mapping = {
     1: "Phishing",
@@ -77,12 +81,22 @@ def bc_test_questions():
         #         print("Tienes que reportar: %s" % result_text)
 
         # ==============segunda prueba================
+        # result_gen = []
+        # with engine.prove_goal('bc_simple_rules_questions.what_to_do($action)') as gen:
+        #     for vars, plan in gen:
+        #         result_gen.append(vars)
+        #         action_text = action_mapping[vars['action']]
+        #         print("Recommended action: %s" % action_text)
+
+        # ============== es el bueno ===================
         result_gen = []
-        with engine.prove_goal('bc_simple_rules_questions.what_to_do($action)') as gen:
+        with engine.prove_goal('bc_simple_rules_questions.seccion1($action)') as gen:
             for vars, plan in gen:
                 result_gen.append(vars)
-                action_text = action_mapping[vars['action']]
-                print("Recommended action: %s" % action_text)
+                action_text = ans_seccion1[vars['action']]
+                print("Herramientas recomendadas:")
+                for i, tool in enumerate(action_text.split(", ")):
+                    print(f"{i+1}. {tool}")
 
         print("===result_gen====: ", result_gen)        
 

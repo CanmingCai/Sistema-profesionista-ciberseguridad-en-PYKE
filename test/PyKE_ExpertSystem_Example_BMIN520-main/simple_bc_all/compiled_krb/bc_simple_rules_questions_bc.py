@@ -365,6 +365,90 @@ def handle_gusano(rule, arg_patterns, arg_context):
     finally:
       context.done()
 
+def handle_s1_caso1(rule, arg_patterns, arg_context):
+  engine = rule.rule_base.engine
+  patterns = rule.goal_arg_patterns()
+  if len(arg_patterns) == len(patterns):
+    context = contexts.bc_context(rule)
+    try:
+      if all(map(lambda pat, arg:
+                              pat.match_pattern(context, context,
+                                                arg, arg_context),
+                            patterns,
+                            arg_patterns)):
+        rule.rule_base.num_bc_rules_matched += 1
+        with engine.prove('questions', 'seccion1_p1', context,
+                          (rule.pattern(0),)) \
+          as gen_1:
+          for x_1 in gen_1:
+            assert x_1 is None, \
+              "bc_simple_rules_questions.handle_s1_caso1: got unexpected plan from when clause 1"
+            with engine.prove('questions', 'seccion1_p2', context,
+                              (rule.pattern(0),)) \
+              as gen_2:
+              for x_2 in gen_2:
+                assert x_2 is None, \
+                  "bc_simple_rules_questions.handle_s1_caso1: got unexpected plan from when clause 2"
+                with engine.prove('questions', 'seccion1_p3', context,
+                                  (rule.pattern(1),)) \
+                  as gen_3:
+                  for x_3 in gen_3:
+                    assert x_3 is None, \
+                      "bc_simple_rules_questions.handle_s1_caso1: got unexpected plan from when clause 3"
+                    with engine.prove('questions', 'seccion1_p4', context,
+                                      (rule.pattern(0),)) \
+                      as gen_4:
+                      for x_4 in gen_4:
+                        assert x_4 is None, \
+                          "bc_simple_rules_questions.handle_s1_caso1: got unexpected plan from when clause 4"
+                        rule.rule_base.num_bc_rule_successes += 1
+                        yield
+        rule.rule_base.num_bc_rule_failures += 1
+    finally:
+      context.done()
+
+def handle_s1_caso2(rule, arg_patterns, arg_context):
+  engine = rule.rule_base.engine
+  patterns = rule.goal_arg_patterns()
+  if len(arg_patterns) == len(patterns):
+    context = contexts.bc_context(rule)
+    try:
+      if all(map(lambda pat, arg:
+                              pat.match_pattern(context, context,
+                                                arg, arg_context),
+                            patterns,
+                            arg_patterns)):
+        rule.rule_base.num_bc_rules_matched += 1
+        with engine.prove('questions', 'seccion1_p1', context,
+                          (rule.pattern(0),)) \
+          as gen_1:
+          for x_1 in gen_1:
+            assert x_1 is None, \
+              "bc_simple_rules_questions.handle_s1_caso2: got unexpected plan from when clause 1"
+            with engine.prove('questions', 'seccion1_p2', context,
+                              (rule.pattern(1),)) \
+              as gen_2:
+              for x_2 in gen_2:
+                assert x_2 is None, \
+                  "bc_simple_rules_questions.handle_s1_caso2: got unexpected plan from when clause 2"
+                with engine.prove('questions', 'seccion1_p3', context,
+                                  (rule.pattern(0),)) \
+                  as gen_3:
+                  for x_3 in gen_3:
+                    assert x_3 is None, \
+                      "bc_simple_rules_questions.handle_s1_caso2: got unexpected plan from when clause 3"
+                    with engine.prove('questions', 'seccion1_p4', context,
+                                      (rule.pattern(0),)) \
+                      as gen_4:
+                      for x_4 in gen_4:
+                        assert x_4 is None, \
+                          "bc_simple_rules_questions.handle_s1_caso2: got unexpected plan from when clause 4"
+                        rule.rule_base.num_bc_rule_successes += 1
+                        yield
+        rule.rule_base.num_bc_rule_failures += 1
+    finally:
+      context.done()
+
 def populate(engine):
   This_rule_base = engine.get_create('bc_simple_rules_questions')
   
@@ -448,6 +532,20 @@ def populate(engine):
                   (pattern.pattern_literal('preguntar_leyva'),),
                   (),
                   (pattern.pattern_literal(True),))
+  
+  bc_rule.bc_rule('handle_s1_caso1', This_rule_base, 'seccion1',
+                  handle_s1_caso1, None,
+                  (pattern.pattern_literal('caso1'),),
+                  (),
+                  (pattern.pattern_literal(True),
+                   pattern.pattern_literal(False),))
+  
+  bc_rule.bc_rule('handle_s1_caso2', This_rule_base, 'seccion1',
+                  handle_s1_caso2, None,
+                  (pattern.pattern_literal('caso2'),),
+                  (),
+                  (pattern.pattern_literal(True),
+                   pattern.pattern_literal(False),))
 
 
 Krb_filename = '..\\bc_simple_rules_questions.krb'
@@ -489,4 +587,14 @@ Krb_lineno_map = (
     ((332, 337), (75, 75)),
     ((350, 354), (78, 78)),
     ((356, 361), (80, 80)),
+    ((374, 378), (86, 86)),
+    ((380, 385), (88, 88)),
+    ((386, 391), (89, 89)),
+    ((392, 397), (90, 90)),
+    ((398, 403), (91, 91)),
+    ((416, 420), (94, 94)),
+    ((422, 427), (96, 96)),
+    ((428, 433), (97, 97)),
+    ((434, 439), (98, 98)),
+    ((440, 445), (99, 99)),
 )

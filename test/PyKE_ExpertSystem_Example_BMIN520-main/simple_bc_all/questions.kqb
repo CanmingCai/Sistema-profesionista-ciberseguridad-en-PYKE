@@ -64,3 +64,29 @@ is_system_slow($ans)
     Is your system running unusually slow?
     ---
     $ans = yn
+
+# ================================ es el bueno ================================
+#  --------- Efectividad de seguridad ---------
+seccion1_p1($ans)
+    Deseas tener Capacidad para detectar y prevenir amenazas conocidas y desconocidas?
+    ---
+    $ans = yn
+
+seccion1_p2($ans)
+    Deseas tener Eficiencia en la deteccion de malware, intrusiones y otros ataques?
+    ---
+    $ans = yn
+
+seccion1_p3($ans)
+    Deseas tener eficiencia en restringir los accesos?
+    ---
+    $ans = yn
+
+seccion1_p4($ans)
+    Deseas tener bueno Nivel de precision en la identificacion de actividades maliciosas?
+    ---
+    $ans = yn
+
+
+#  --------- Facilidad de uso ---------
+

@@ -26,3 +26,7 @@ def bc_test():
         krb_traceback.print_exc()
         sys.exit(1)
 
+if __name__ == "__main__":
+    #fc_test()
+    bc_test()
+

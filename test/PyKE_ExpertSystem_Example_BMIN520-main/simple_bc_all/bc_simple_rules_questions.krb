@@ -78,3 +78,23 @@ handle_gusano
     use what_to_do(preguntar_leyva)
     when
         questions.is_system_slow(True)
+
+
+# ================================ es el bueno ================================
+#  --------- Efectividad de seguridad ---------
+handle_s1_caso1
+    use seccion1(caso1)
+    when
+        questions.seccion1_p1(True)
+        questions.seccion1_p2(True)
+        questions.seccion1_p3(False)
+        questions.seccion1_p4(True)
+
+handle_s1_caso2
+    use seccion1(caso2)
+    when
+        questions.seccion1_p1(True)
+        questions.seccion1_p2(False)
+        questions.seccion1_p3(True)
+        questions.seccion1_p4(True)
+
