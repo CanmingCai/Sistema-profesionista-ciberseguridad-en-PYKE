@@ -9,6 +9,11 @@ engine = knowledge_engine.engine(__file__)
 ans_seccion1 = {
     "caso1" : "Software antivirus, IDS_e_PS, PKI, MDR",
     "caso2" : "Firewall, PKI, MFA, IAM",
+    "caso3" : "Firewall, Software antivirus, IDS_e_PS, PKI, MFA, IAM, MDR",
+    "caso4" : "Firewall, Software antivirus, IDS_e_PS, PKI, MFA, IAM, MDR, pentesting",
+    "caso6" : "Software antivirus, IDS_e_PS, MDR",
+    "caso8" : "Software antivirus, IDS_e_PS, MDR, pentesting",
+    "caso9" : "Software antivirus, IDS_e_PS, PKI, MDR, pentesting",
 }
 
 cyber_threat_mapping = {

@@ -98,3 +98,84 @@ handle_s1_caso2
         questions.seccion1_p3(True)
         questions.seccion1_p4(True)
 
+handle_s1_caso3
+    use seccion1(caso3)
+    when
+        questions.seccion1_p1(False)
+        questions.seccion1_p2(True)
+        questions.seccion1_p3(True)
+        questions.seccion1_p4(True)
+
+handle_s1_caso4
+    use seccion1(caso4)
+    when
+        questions.seccion1_p1(True)
+        questions.seccion1_p2(True)
+        questions.seccion1_p3(True)
+        questions.seccion1_p4(False)
+
+handle_s1_caso5
+    use seccion1(caso2)
+    when
+        questions.seccion1_p1(False)
+        questions.seccion1_p2(False)
+        questions.seccion1_p3(True)
+        questions.seccion1_p4(True)
+
+handle_s1_caso6
+    use seccion1(caso6)
+    when
+        questions.seccion1_p1(False)
+        questions.seccion1_p2(True)
+        questions.seccion1_p3(False)
+        questions.seccion1_p4(True)
+
+handle_s1_caso7
+    use seccion1(caso4)
+    when
+        questions.seccion1_p1(False)
+        questions.seccion1_p2(True)
+        questions.seccion1_p3(True)
+        questions.seccion1_p4(False)
+
+handle_s1_caso8
+    use seccion1(caso8)
+    when
+        questions.seccion1_p1(True)
+        questions.seccion1_p2(True)
+        questions.seccion1_p3(False)
+        questions.seccion1_p4(False)
+
+handle_s1_caso9
+    use seccion1(caso4)
+    when
+        questions.seccion1_p1(True)
+        questions.seccion1_p2(False)
+        questions.seccion1_p3(False)
+        questions.seccion1_p4(False)
+
+handle_s1_caso10
+    use seccion1(caso8)
+    when
+        questions.seccion1_p1(False)
+        questions.seccion1_p2(True)
+        questions.seccion1_p3(False)
+        questions.seccion1_p4(False)
+
+handle_s1_caso11
+    use seccion1(caso2)
+    when
+        questions.seccion1_p1(False)
+        questions.seccion1_p2(False)
+        questions.seccion1_p3(True)
+        questions.seccion1_p4(False)
+
+handle_s1_caso12
+    use seccion1(caso3)
+    when
+        questions.seccion1_p1(False)
+        questions.seccion1_p2(False)
+        questions.seccion1_p3(False)
+        questions.seccion1_p4(True)
+
+#  --------- Facilidad de uso ---------    
