@@ -30,4 +30,5 @@ Correr:
 python driver_simple.py
 ```
 
+![image](seccion1_caso1.png)
 
